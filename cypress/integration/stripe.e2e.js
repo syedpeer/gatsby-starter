@@ -20,4 +20,9 @@ describe(`stripe checkout.js`, () => {
 			})
 		})
 	}
+	it(`opens a visible checkout iframe when button click triggers StripeHandler.open()`, () => {
+		cy.visit(`/`)
+		cy.get(`button[data-testid=checkout-button]`).click()
+		cy.get(`iframe[name=stripe_checkout_app]`).should(`be.visible`)
+	})
 })
