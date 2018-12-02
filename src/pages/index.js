@@ -1,4 +1,5 @@
 import AppDescription from '../components/appdescription';
+import Checkout from '../components/checkout';
 import HtmlHead from '../components/htmlhead'
 import Layout from '../components/layout'
 import React from 'react'
@@ -13,6 +14,8 @@ export const IndexMarkup = props => (
 		<main>
 			<AppDescription />
 			<AllSitePages />
+			<h2>Also, this...</h2>
+			<Checkout />
 		</main>
 	</Layout>
 )
