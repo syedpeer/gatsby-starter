@@ -65,6 +65,7 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
 		`gatsby-plugin-sitemap`,
 		`gatsby-plugin-stripe`,
+		`gatsby-plugin-stripe-checkout`,
 		{
 			resolve: `gatsby-plugin-typography`,
 			options: {

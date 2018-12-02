@@ -11,3 +11,13 @@ describe(`stripe.js`, () => {
 	}
 })
 
+describe(`stripe checkout.js`, () => {
+	for (const pageData in pages) {
+		it(`is used in page: `+ pages[pageData].path, () => {
+			cy.request(pages[pageData].path)
+			.should((xhr) => {
+				expect(xhr.body).to.contain(`checkout.stripe.com/checkout.js`)
+			})
+		})
+	}
+})
