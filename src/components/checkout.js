@@ -12,7 +12,7 @@ const Checkout = class extends React.Component {
 		this.setState({ disabled: false, buttonText: `BUY NOW`})
 	}
 	componentDidMount() {
-		this.stripeHandler = window.StripeCheckout.configure({
+		this.stripeHandler = window || window.StripeCheckout.configure({
 			key: `pk_test_4D4oy79bOUIBhUNuIBEFTqak`,
 			closed: () => {
 				this.resetButton()

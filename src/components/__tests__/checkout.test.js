@@ -3,8 +3,6 @@ import React from 'react'
 import { render } from 'react-testing-library'
 import renderer from 'react-test-renderer'
 
-Checkout.prototype.componentDidMount = {}
-
 describe(`Checkout`, () =>
 	it(`renders correctly with react-testing-library`, () => {
 		const { getByTestId } = render(<Checkout />)

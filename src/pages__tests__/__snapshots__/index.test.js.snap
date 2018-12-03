@@ -133,6 +133,27 @@ exports[`HomePage renders correctly 1`] = `
           </li>
         </ul>
       </section>
+      <h2>
+        Also, this...
+      </h2>
+      <div>
+        <h4>
+          Spend your Money!
+        </h4>
+        <p>
+          Use any email, 4242 4242 4242 4242 as the credit card nmumber, any 3 digit number, and any future date of expiration.
+        </p>
+        <button
+          data-testid="checkout-button"
+          disabled={false}
+          onClick={[Function]}
+        >
+          BUY NOW
+        </button>
+        <span>
+          
+        </span>
+      </div>
     </main>
   </div>
   <footer

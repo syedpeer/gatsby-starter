@@ -1,6 +1,6 @@
+import IndexMarkup from '../pages/index'
 import React from 'react'
 import renderer from 'react-test-renderer'
-import IndexMarkup from '../pages/index'
 
 describe(`HomePage`, () =>
   it(`renders correctly`, () => {
