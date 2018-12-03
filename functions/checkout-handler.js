@@ -27,35 +27,14 @@ module.exports.handler = (event, context, callback) => {
       }
       callback(null, response)
     })
+    .catch(err => {
+      const response = {
+        headers,
+        statusCode: 500,
+        body: JSON.stringify({
+          error: err.message
+        })
+      }
+      callback(null, response)
+    })
 }
-
-// module.exports.handler = (event, context, callback) => {
-
-//   return stripe.charges
-//     .create()
-//     .then(charge => {
-//       // Success response
-//       console.log(charge);
-//       const response = {
-//         headers,
-//         statusCode: 200,
-//         body: JSON.stringify({
-//           message: `Charge processed!`,
-//           charge
-//         })
-//       };
-//       callback(null, response);
-//     })
-//     .catch(err => {
-//       // Error response
-//       console.log(err);
-//       const response = {
-//         headers,
-//         statusCode: 500,
-//         body: JSON.stringify({
-//           error: err.message
-//         })
-//       };
-//       callback(null, response);
-//     });
-// };
