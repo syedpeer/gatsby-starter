@@ -39,13 +39,13 @@ const Checkout = class extends React.Component {
 					}),
 				})
 				.then(res => {
-					console.log(`Transaction processed successfully.`)
+					// console.log(`Transaction processed successfully.`)
 					this.resetButton()
 					this.setState({ paymentMessage: `Payment successful!`})
 					return res
 				})
 				.catch(error => {
-					console.error(`Error:`, error)
+					// console.error(`Error:`, error)
 					this.setState({ paymentMessage: `Payment failed.`})
 				})
 			},
