@@ -17,6 +17,12 @@ The Gatsby CLI helps you create new sites using Gatsby starters (like this one!)
 
 ```sh
 
+# be sure node, git and yarn are installed and available at your command line
+# this command `node --version` should echo the version of node on your computer
+# this command `yarn --version` should echo the version of yarn on your computer
+# this command `git --version` should echo the version of git on your computer
+# installing those tools are beyond this readme
+
 # install the Gatsby CLI globally
 
 npm install -g gatsby-cli
@@ -43,8 +49,14 @@ Navigate into your new site’s directory and start it up.
 
 cd my-gatsby-site
 
+# this command is actually run during the previous step...
+# but go ahead and run it
+
 npm install
 
+```
+
+```sh
 
 # to run jest tests
 
