@@ -22,8 +22,9 @@ The Gatsby CLI helps you create new sites using Gatsby starters (like this one!)
 # this command `yarn --version` should echo the version of yarn on your computer
 # this command `git --version` should echo the version of git on your computer
 # installing those tools are beyond this readme
+# also, be sure to check this resource so gatsby has all the right tools in your environment: https://www.gatsbyjs.org/docs/preparing-your-environment/
 
-# install the Gatsby CLI globally
+# presuming you've got all that... you also need the Gatsby CLI globally
 
 npm install -g gatsby-cli
 
