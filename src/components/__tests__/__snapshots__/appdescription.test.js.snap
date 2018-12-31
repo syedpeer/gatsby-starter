@@ -16,9 +16,9 @@ exports[`AppDescription renders correctly -- according to react-test-renderer 1`
     </a>
      and the full source code is at 
     <a
-      href="//github.com/scrum-works/gatsby-starter"
+      href="//github.com/DavidSabine/gatsby-starter"
     >
-      github.com/scrum-works/gatsby-starter
+      github.com/DavidSabine/gatsby-starter
     </a>
     .
   </p>
