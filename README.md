@@ -38,7 +38,7 @@ Use the Gatsby CLI to create a new site, specifying this starter.
 
 # create a new Gatsby site using this starter
 
-gatsby new my-gatsby-site https://github.com/DavidSabine/gatsby-starter
+gatsby new my-gatsby-site https://github.com/scrum-works/gatsby-starter
 
 ```
 
