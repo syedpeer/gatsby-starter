@@ -54,11 +54,10 @@ const Checkout = class extends React.Component {
 	render() {
 		return (
 			<div>
-				<h4>Spend your Money!</h4>
-				<p>Use any email, 4242 4242 4242 4242 as the credit card nmumber, any 3 digit number, and any future date of expiration.</p>
-				<button data-testid="checkout-button" onClick={event => this.openStripeCheckout(event)} 
-				disabled={this.state.disabled}>{this.state.buttonText}</button>
-				<span>{this.state.paymentMessage}</span>
+				<h4>Stripe payment tools!</h4>
+				<p>The plugins are installed.  Configure with your own key and form handler.  Hint for testing: use any email address, 4242 4242 4242 4242 as the credit card nmumber, any 3 digit number, and any future date of expiration.</p>
+				{/* <button data-testid="checkout-button" onClick={event => this.openStripeCheckout(event)} disabled={this.state.disabled}>{this.state.buttonText}</button>
+				<span>{this.state.paymentMessage}</span> */}
 			</div>
 		)
 	}
