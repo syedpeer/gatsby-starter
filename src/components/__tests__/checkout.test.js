@@ -4,7 +4,7 @@ import { render } from 'react-testing-library'
 import renderer from 'react-test-renderer'
 
 describe(`Checkout`, () =>
-	it(`renders correctly with react-testing-library`, () => {
+	it.skip(`renders correctly with react-testing-library`, () => {
 		const { getByTestId } = render(<Checkout />)
 		expect(getByTestId(`checkout-button`)).toHaveTextContent(`BUY NOW`)
 	}),
