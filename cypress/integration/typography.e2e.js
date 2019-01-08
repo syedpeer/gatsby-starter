@@ -1,12 +1,10 @@
 const pages = require(`../../nav-config`).pages
 
-describe(`typography.js`, () => {
+describe(`typography.js is used `, () => {
 	for (const pageData in pages) {
-		it(`is used in page: `+ pages[pageData].path, () => {
-			cy.request(pages[pageData].path)
-			.should((xhr) => {
-				expect(xhr.body).to.contain(`typography.js`)
-			})
+		it(`at `+ pages[pageData].path, () => {
+			cy.visit(pages[pageData].path, {failOnStatusCode: false })
+			cy.get(`html style[id='typography.js']`).should('exist')
 		})
 	}
 })
