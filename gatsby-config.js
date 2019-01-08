@@ -44,8 +44,8 @@ module.exports = {
 			options: {
 				id: `GTM-W9DNBKC`,
 				includeInDevelopment: true,
-				gtmAuth: `9qdcleHZMeragP2aZTYTpw`,
-				gtmPreview: `env-5`,
+				// gtmAuth: `9qdcleHZMeragP2aZTYTpw`,
+				// gtmPreview: `env-5`,
 			},
 		},
 		{
@@ -77,7 +77,7 @@ module.exports = {
 			resolve: `gatsby-source-stripe`,
 			options: {
 				objects: [`Balance`],
-				secretKey: `sk_test_N5gHqJ1BCHIxPiSGfRbvmGtH`,
+				secretKey: process.env.STRIPE_SECRET_KEY,
 			}
 		},
   ],

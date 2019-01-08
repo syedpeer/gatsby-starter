@@ -4,6 +4,7 @@
   "license": "CC-BY-4.0",
   "scripts": {
     "build": "gatsby build",
+    "build:development": "cross-env THISVARIABLE=is_available_during_build npm run build",
     "cy:open-dev": "cypress open --config baseUrl=http://localhost:8000",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
@@ -44,6 +45,7 @@
     "babel-core": "^7.0.0-0",
     "babel-jest": "^23.6.0",
     "babel-plugin-emotion": "^9.2.11",
+    "cross-env": "^5.2.0",
     "cypress": "^3.1.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
