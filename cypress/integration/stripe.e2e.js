@@ -20,7 +20,7 @@ describe(`stripe checkout.js`, () => {
 			})
 		})
 	}
-	it.skip(`opens a visible checkout iframe when button click triggers StripeHandler.open()`, () => {
+	it(`opens a visible checkout iframe when button click triggers StripeHandler.open()`, () => {
 		// this can be enabled when stripe plugin has a valid key for testing
 		cy.visit(`/`)
 		cy.get(`button[data-testid=checkout-button]`).click()
