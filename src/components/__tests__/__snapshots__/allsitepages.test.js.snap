@@ -8,12 +8,7 @@ exports[`AllSitePages renders correctly -- according to react-test-renderer 1`] 
   <ul>
     <li>
       <a
-        aria-current="page"
-        className=""
         href="/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        style={Object {}}
       >
         Home
       </a>
@@ -21,8 +16,6 @@ exports[`AllSitePages renders correctly -- according to react-test-renderer 1`] 
     <li>
       <a
         href="/404/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
       >
         Custom 404 Error
       </a>
@@ -31,8 +24,6 @@ exports[`AllSitePages renders correctly -- according to react-test-renderer 1`] 
     <li>
       <a
         href="/dashboard/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
       >
         Dashboard
       </a>
@@ -41,8 +32,6 @@ exports[`AllSitePages renders correctly -- according to react-test-renderer 1`] 
         <li>
           <a
             href="/dashboard/login"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
           >
             Login
           </a>
@@ -51,8 +40,6 @@ exports[`AllSitePages renders correctly -- according to react-test-renderer 1`] 
         <li>
           <a
             href="/dashboard/profile"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
           >
             Profile
           </a>

@@ -1,48 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HomePage renders correctly 1`] = `
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-  min-height: 100vh;
-}
-
-.emotion-0 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-0 header {
-  border-bottom: solid 1px;
-  padding: 3.24rem;
-}
-
-.emotion-0 main {
-  padding: 3.24rem;
-}
-
-.emotion-1 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  border-top: solid 1px;
-  padding: 3.24rem;
-  font-size: 75%;
-  text-align: center;
-}
-
 <div
-  className="emotion-2"
+  css={
+    Object {
+      "map": undefined,
+      "name": "xym8yj",
+      "next": undefined,
+      "styles": "
+        display:flex;
+        flex-direction:column;
+        height:100%;
+        min-height:100vh;
+      ",
+    }
+  }
 >
   <div
-    className="emotion-0"
+    css={
+      Object {
+        "map": undefined,
+        "name": "17nvo1r",
+        "next": undefined,
+        "styles": "
+          flex:1;
+          header {
+            border-bottom: solid 1px;
+            padding: 3.24rem;
+          }
+          main {
+            padding: 3.24rem;
+          }
+        ",
+      }
+    }
   >
     <header>
       <h1>
@@ -79,12 +70,7 @@ exports[`HomePage renders correctly 1`] = `
         <ul>
           <li>
             <a
-              aria-current="page"
-              className=""
               href="/"
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              style={Object {}}
             >
               Home
             </a>
@@ -92,8 +78,6 @@ exports[`HomePage renders correctly 1`] = `
           <li>
             <a
               href="/404/"
-              onClick={[Function]}
-              onMouseEnter={[Function]}
             >
               Custom 404 Error
             </a>
@@ -102,8 +86,6 @@ exports[`HomePage renders correctly 1`] = `
           <li>
             <a
               href="/dashboard/"
-              onClick={[Function]}
-              onMouseEnter={[Function]}
             >
               Dashboard
             </a>
@@ -112,8 +94,6 @@ exports[`HomePage renders correctly 1`] = `
               <li>
                 <a
                   href="/dashboard/login"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
                 >
                   Login
                 </a>
@@ -122,8 +102,6 @@ exports[`HomePage renders correctly 1`] = `
               <li>
                 <a
                   href="/dashboard/profile"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
                 >
                   Profile
                 </a>
@@ -157,7 +135,6 @@ exports[`HomePage renders correctly 1`] = `
     </main>
   </div>
   <footer
-    className="emotion-1"
     dangerouslySetInnerHTML={
       Object {
         "__html": "

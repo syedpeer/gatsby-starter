@@ -1,6 +1,6 @@
 import Footer from '../components/footer'
 import React from 'react'
-import { css } from 'react-emotion'
+import { css } from '@emotion/core'
 import { rhythm } from '../utils/typography'
 
 class Template extends React.Component {
@@ -8,13 +8,13 @@ class Template extends React.Component {
     const { children } = this.props
     return (
       <div
-        className={css`
+        css={css`
         display:flex;
         flex-direction:column;
         height:100%;
         min-height:100vh;
       `}>
-        <div className={css`
+        <div css={css`
           flex:1;
           header {
             border-bottom: solid 1px;
@@ -26,7 +26,7 @@ class Template extends React.Component {
         `}>
           {children}
         </div>
-        <Footer className={css`
+        <Footer css={css`
           flex:none;
           border-top: solid 1px;
           padding: ${rhythm(2)};

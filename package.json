@@ -13,11 +13,11 @@
     "test:watch": "jest --watchAll"
   },
   "dependencies": {
-    "emotion": "^9.2.12",
-    "emotion-server": "^9.2.12",
+    "@emotion/core": "^10.0.6",
+    "@emotion/styled": "^10.0.6",
     "gatsby": "^2.0.89",
     "gatsby-plugin-create-client-paths": "^2.0.2",
-    "gatsby-plugin-emotion": "^2.0.6",
+    "gatsby-plugin-emotion": "^4.0.1",
     "gatsby-plugin-google-analytics": "^2.0.9",
     "gatsby-plugin-google-tagmanager": "^2.0.6",
     "gatsby-plugin-manifest": "^2.0.10",
@@ -32,52 +32,25 @@
     "gray-percentage": "^2.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-emotion": "^9.2.12",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.18",
     "typography": "^0.16.18"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-optional-chaining": "^7.0.0",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
-    "@babel/core": "^7.2.2",
+    "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
-    "babel-plugin-emotion": "^9.2.11",
+    "babel-preset-gatsby": "^0.1.6",
     "cross-env": "^5.2.0",
     "cypress": "^3.1.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "jest-dom": "^3.0.0",
-    "jest-emotion": "^9.2.11",
-    "react-test-renderer": "^16.6.3",
-    "react-testing-library": "^5.4.4",
+    "react-test-renderer": "^16.7.0",
     "start-server-and-test": "^1.7.10"
-  },
-  "jest": {
-    "globals": {
-      "__PATH_PREFIX__": ""
-    },
-    "moduleNameMapper": {
-      ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
-      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
-    },
-    "setupFiles": [
-      "<rootDir>/jest-loadershim.js"
-    ],
-    "setupTestFrameworkScriptFile": "<rootDir>/jest-preprocess-beforeeach.js",
-    "testPathIgnorePatterns": [
-      "node_modules",
-      ".cache"
-    ],
-    "testRegex": "/.*(__tests__\\/.*)|(.*(test|spec))\\.jsx?$",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.jsx?$": "<rootDir>/jest-preprocess.js"
-    },
-    "transformIgnorePatterns": [
-      "node_modules/(?!(gatsby)/)"
-    ]
   }
 }
