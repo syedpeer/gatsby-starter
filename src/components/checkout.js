@@ -29,27 +29,28 @@ const Checkout = class extends React.Component {
 			amount: 2500,
 			description: `A product for demonstration.`,
 			token: token => {
-				fetch(`https://gatsby-starter.davesabine.com/.netlify/functions/checkout.js`, {
-					method: `POST`,
-					mode: `no-cors`,
-					body: JSON.stringify({
-						token,
-						amount,
-					}),
-					headers: new Headers({
-						'Content-Type': 'application/json',
-					}),
-				})
-				.then(res => {
-					// console.log(`Transaction processed successfully.`)
-					this.resetButton()
-					this.setState({ paymentMessage: `Payment successful!`})
-					return res
-				})
-				.catch(error => {
-					// console.error(`Error:`, error)
-					this.setState({ paymentMessage: `Payment failed.`})
-				})
+				// do nothing for now...
+				// fetch(`https://gatsby-starter.davesabine.com/.netlify/functions/checkout-handler`, {
+				// 	method: `POST`,
+				// 	mode: `no-cors`,
+				// 	body: JSON.stringify({
+				// 		token,
+				// 		amount,
+				// 	}),
+				// 	headers: new Headers({
+				// 		'Content-Type': 'application/json',
+				// 	}),
+				// })
+				// .then(res => {
+				// 	// console.log(`Transaction processed successfully.`)
+				// 	this.resetButton()
+				// 	this.setState({ paymentMessage: `Payment successful!`})
+				// 	return res
+				// })
+				// .catch(error => {
+				// 	// console.error(`Error:`, error)
+				// 	this.setState({ paymentMessage: `Payment failed.`})
+				// })
 			},
 		})
 	}
