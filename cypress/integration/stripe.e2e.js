@@ -1,6 +1,6 @@
 const pages = require(`../../nav-config`).pages
 
-describe(`stripe.js`, () => {
+describe(`stripe.js - via gatsby-plugin-stripe`, () => {
 	for (const pageData in pages) {
 		it(`is used in page: `+ pages[pageData].path, () => {
 			cy.request(pages[pageData].path)
@@ -11,7 +11,7 @@ describe(`stripe.js`, () => {
 	}
 })
 
-describe(`stripe checkout.js`, () => {
+describe(`stripe checkout.js via gatsby-plugin-stripe-checkout`, () => {
 	for (const pageData in pages) {
 		it(`is used in page: `+ pages[pageData].path, () => {
 			cy.request(pages[pageData].path)
