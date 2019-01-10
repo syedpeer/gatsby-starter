@@ -6,11 +6,11 @@ const metaData = require(`../../gatsby-config`).siteMetadata
 const Checkout = class extends React.Component {
 	state = {
 		disabled: false,
-		buttonText: `BUY NOW`,
+		buttonText: `Pay with 'Stripe Checkout'`,
 		paymentMessage: ``,
 	}
 	resetButton() {
-		this.setState({ disabled: false, buttonText: `BUY NOW`})
+		this.setState({ disabled: false, buttonText: `Pay with 'Stripe Checkout'`})
 	}
 	componentDidMount() {
 		if((typeof window !== `undefined`) && (typeof window.StripeCheckout !== `undefined`)) {
@@ -30,7 +30,7 @@ const Checkout = class extends React.Component {
 			amount: 2500,
 			description: `A product for demonstration.`,
 			token: token => {
-				// do nothing for now...
+				// do nothing for now... no 'charges' are incurred until you've got a checkout handler endpoint (in lambda or similar)
 				// fetch(`https://gatsby-starter.davesabine.com/.netlify/functions/checkout-handler`, {
 				// 	method: `POST`,
 				// 	mode: `no-cors`,
@@ -58,10 +58,8 @@ const Checkout = class extends React.Component {
 	render() {
 		return (
 			<div>
-				<h4>Stripe payment tools!</h4>
 				<button data-testid='checkout-button' onClick={event => this.openStripeCheckout(event)} disabled={this.state.disabled}>{this.state.buttonText}</button>
 				<span>{this.state.paymentMessage}</span>
-				<p>The plugins are installed.  Configure with your own key and form handler.  Hint for testing: use any email address, 4242 4242 4242 4242 as the credit card number, any 3 digit number, and any future date of expiration.</p>
 			</div>
 		)
 	}

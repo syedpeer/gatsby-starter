@@ -6,8 +6,6 @@ class MyCheckout extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.stripe.createToken({name: `Jenny Rosen`})
-        // this.props.stripe.createToken({type: 'card', name: 'Jenny Rosen'})
-        // this.props.stripe.createSource({type: 'card', owner: { name: 'Jenny Rosen'}})
         .then(({token}) => {
             console.log('Received Stripe token:', token)
         })
