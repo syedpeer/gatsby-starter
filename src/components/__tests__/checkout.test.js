@@ -1,4 +1,4 @@
-import Checkout  from '../checkout'
+import Checkout  from '../stripe-checkout'
 import React from 'react'
 import renderer from 'react-test-renderer'
 

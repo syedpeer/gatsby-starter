@@ -9,7 +9,8 @@ const sitesConfig = {
 				icon: `src/images/512px-Home_font_awesome.svg.png`,
 				siteUrl: `http://localhost`, //No trailing slash allowed
 				titleTemplate: `%s | Default!`,
-			 	twitterCreator: `@davesabine`
+			 	twitterCreator: `@davesabine`,
+				stripe_public_key_test: `pk_test_4D4oy79bOUIBhUNuIBEFTqak`
 			}
 		},
 	}

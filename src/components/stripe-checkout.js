@@ -1,6 +1,7 @@
 import React from 'react'
 
 const amount = 2500
+const metaData = require(`../../gatsby-config`).siteMetadata
 
 const Checkout = class extends React.Component {
 	state = {
@@ -14,7 +15,7 @@ const Checkout = class extends React.Component {
 	componentDidMount() {
 		if((typeof window !== `undefined`) && (typeof window.StripeCheckout !== `undefined`)) {
 			this.stripeHandler = window.StripeCheckout.configure({
-				key: `pk_test_4D4oy79bOUIBhUNuIBEFTqak`,
+				key: metaData.stripe_public_key_test,
 				closed: () => {
 					this.resetButton()
 				}

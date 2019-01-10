@@ -1,9 +1,10 @@
-import AppDescription from '../components/appdescription';
-import Checkout from '../components/checkout';
+import AppDescription from '../components/appdescription'
+import Checkout from '../components/stripe-checkout'
+import MyCheckout from '../components/my-checkout'
 import HtmlHead from '../components/htmlhead'
 import Layout from '../components/layout'
 import React from 'react'
-import AllSitePages from '../components/allsitepages';
+import AllSitePages from '../components/allsitepages'
 
 export const IndexMarkup = props => (
 	<Layout>
@@ -14,8 +15,8 @@ export const IndexMarkup = props => (
 		<main>
 			<AppDescription />
 			<AllSitePages />
-			<h2>Also, this...</h2>
-			<Checkout />
+			{/* <Checkout /> */}
+			<MyCheckout />
 		</main>
 	</Layout>
 )

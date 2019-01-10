@@ -16,7 +16,7 @@ describe(`stripe checkout.js via gatsby-plugin-stripe-checkout`, () => {
 		it(`is used in page: `+ pages[pageData].path, () => {
 			cy.request(pages[pageData].path)
 			.should((xhr) => {
-				expect(xhr.body).to.contain(`checkout.stripe.com/checkout.js`)
+				expect(xhr.body).to.contain(`checkout.stripe.com/stripe-checkout.js`)
 			})
 		})
 	}
