@@ -29,7 +29,7 @@ const Checkout = class extends React.Component {
 			amount: 2500,
 			description: `A product for demonstration.`,
 			token: token => {
-				fetch(`LAMDA_URL`, {
+				fetch(`https://gatsby-starter.davesabine.com/.netlify/functions/checkout.js`, {
 					method: `POST`,
 					mode: `no-cors`,
 					body: JSON.stringify({
