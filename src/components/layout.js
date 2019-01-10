@@ -6,10 +6,17 @@ import { StripeProvider } from 'react-stripe-elements'
 const metaData = require(`../../gatsby-config`).siteMetadata
 
 class Template extends React.Component {
+  constructor() {
+    super()
+    this.state = { stripe: null }
+  }
+  componentDidMount() {
+    this.setState({stripe: window.Stripe(metaData.stripe_public_key_test)})
+  }
   render() {
     const { children } = this.props
     return (
-      <StripeProvider apiKey={metaData.stripe_public_key_test}>
+      <StripeProvider stripe={this.state.stripe}>
         <div
           css={css`
           display:flex;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { PaymentRequestButtonElement, CardElement, injectStripe } from 'react-stripe-elements'
+import { CardElement, injectStripe } from 'react-stripe-elements'
 
 class CheckoutForm extends React.Component {
 	handleSubmit = (event) => {
@@ -26,36 +26,4 @@ class CheckoutForm extends React.Component {
 	}
 }
 
-class PaymentRequestForm extends React.Component {
-	// constructor(props) {
-	// 	super(props);
-	// 	const paymentRequest = props.stripe.paymentRequest({
-	// 		country: 'CA',
-	// 		currency: 'cad',
-	// 		total: {
-	// 			label: 'Demo total',
-	// 			amount: 1000,
-	// 		},
-	// 	})
-	// 	paymentRequest.on('token', ({complete, token, ...data}) => {
-	// 		console.log('Received Stripe token: ', token)
-	// 		console.log('Received customer information: ', data)
-	// 		complete('success')
-	// 	})
-	// 	paymentRequest.canMakePayment().then((result) => {
-	// 		this.setState({canMakePayment: !!result})
-	// 	})
-	// 	this.state = {
-	// 		canMakePayment: false,
-	// 		paymentRequest,
-	// 	}
-	// }  
-	render() {
-		return (
-			<PaymentRequestButtonElement paymentRequest={this.state.paymentRequest} className='PaymentRequestButton'/>
-		)
-	}
-}
-
-// export default injectStripe(CheckoutForm)
-export default injectStripe(PaymentRequestForm)
+export default injectStripe(CheckoutForm)
