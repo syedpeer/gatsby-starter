@@ -11,7 +11,9 @@ class Template extends React.Component {
     this.state = { stripe: null }
   }
   componentDidMount() {
-    this.setState({stripe: window.Stripe(metaData.stripe_public_key_test)})
+    if((typeof window !== `undefined`) && (typeof window.Stripe !== `undefined`)) {
+      this.setState({stripe: window.Stripe(metaData.stripe_public_key_test)})
+    }
   }
   render() {
     const { children } = this.props

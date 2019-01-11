@@ -3,66 +3,44 @@ import React from 'react'
 const amount = 2500
 const metaData = require(`../../gatsby-config`).siteMetadata
 
-const Checkout = class extends React.Component {
+const StripeCheckout = class extends React.Component {
 	state = {
 		disabled: false,
-		buttonText: `Pay with 'Stripe Checkout'`,
+		buttonText: `Pay with 'Stripe Checkout (Beta)'`,
 		paymentMessage: ``,
 	}
 	resetButton() {
-		this.setState({ disabled: false, buttonText: `Pay with 'Stripe Checkout'`})
+		this.setState({ disabled: false, buttonText: `Pay with 'Stripe Checkout (Beta)'`})
 	}
 	componentDidMount() {
-		if((typeof window !== `undefined`) && (typeof window.StripeCheckout !== `undefined`)) {
-			this.stripeHandler = window.StripeCheckout.configure({
-				key: metaData.stripe_public_key_test,
-				closed: () => {
-					this.resetButton()
-				}
+		if((typeof window !== `undefined`) && (typeof window.Stripe !== `undefined`)) {
+			this.stripe = window.Stripe(metaData.stripe_public_key_test, {
+				betas: ['checkout_beta_4'],
 			})
 		}
 	}
-	openStripeCheckout(event) {
+	async redirectToCheckout(event) {
+		let loc = location.href
 		event.preventDefault()
-		this.setState({ disabled: true, buttonText: `WAITING...` })
-		this.stripeHandler.open({
-			name: `Demo Product`,
-			amount: 2500,
-			description: `A product for demonstration.`,
-			token: token => {
-				// do nothing for now... no 'charges' are incurred until you've got a checkout handler endpoint (in lambda or similar)
-				// fetch(`https://gatsby-starter.davesabine.com/.netlify/functions/checkout-handler`, {
-				// 	method: `POST`,
-				// 	mode: `no-cors`,
-				// 	body: JSON.stringify({
-				// 		token,
-				// 		amount,
-				// 	}),
-				// 	headers: new Headers({
-				// 		'Content-Type': 'application/json',
-				// 	}),
-				// })
-				// .then(res => {
-				// 	// console.log(`Transaction processed successfully.`)
-				// 	this.resetButton()
-				// 	this.setState({ paymentMessage: `Payment successful!`})
-				// 	return res
-				// })
-				// .catch(error => {
-				// 	// console.error(`Error:`, error)
-				// 	this.setState({ paymentMessage: `Payment failed.`})
-				// })
-			},
+		this.setState({ disabled: true, buttonText: `GOING TO PAYMENT SCREEN...` })
+		const { error } = await this.stripe.redirectToCheckout({
+			items: [{ sku: 'sku_EK5cdhiGJr1PaF', quantity: 1 }],
+			successUrl: loc,
+			cancelUrl: loc,
 		})
+		if (error) {
+			console.warn('Error:', error)
+		}
 	}
 	render() {
 		return (
 			<div>
-				<button data-testid='checkout-button' onClick={event => this.openStripeCheckout(event)} disabled={this.state.disabled}>{this.state.buttonText}</button>
-				<span>{this.state.paymentMessage}</span>
+			<button data-testid='checkout-button' onClick={event => this.redirectToCheckout(event)} disabled={this.state.disabled}>{this.state.buttonText}</button>
+			<span>{this.state.paymentMessage}</span>
 			</div>
-		)
+			)
+		}
 	}
-}
-
-export default Checkout
+	
+	export default StripeCheckout
+	
