@@ -1,22 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkout renders correctly with react-test-renderer 1`] = `
+exports[`Checkout (v3) renders correctly with react-test-renderer 1`] = `
 <div>
-  <h4>
-    Stripe payment tools!
-  </h4>
   <button
     data-testid="checkout-button"
     disabled={false}
     onClick={[Function]}
   >
-    BUY NOW
+    Pay with 'Stripe Checkout (v3)'
   </button>
   <span>
     
   </span>
-  <p>
-    The plugins are installed.  Configure with your own key and form handler.  Hint for testing: use any email address, 4242 4242 4242 4242 as the credit card number, any 3 digit number, and any future date of expiration.
-  </p>
 </div>
 `;

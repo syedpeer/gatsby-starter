@@ -58,7 +58,7 @@ const StripeCheckout3 = class extends React.Component {
 	render() {
 		return (
 			<div>
-				<button data-testid='checkout-button' onClick={event => this.openStripeCheckout(event)} disabled={this.state.disabled}>{this.state.buttonText}</button>
+				<button data-testid='checkout-button-v3' onClick={event => this.openStripeCheckout(event)} disabled={this.state.disabled}>{this.state.buttonText}</button>
 				<span>{this.state.paymentMessage}</span>
 			</div>
 		)

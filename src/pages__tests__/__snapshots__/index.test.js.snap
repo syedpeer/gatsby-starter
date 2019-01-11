@@ -5,14 +5,14 @@ exports[`HomePage renders correctly 1`] = `
   css={
     Object {
       "map": undefined,
-      "name": "xym8yj",
+      "name": "12xy27n",
       "next": undefined,
       "styles": "
-        display:flex;
-        flex-direction:column;
-        height:100%;
-        min-height:100vh;
-      ",
+          display:flex;
+          flex-direction:column;
+          height:100%;
+          min-height:100vh;
+        ",
     }
   }
 >
@@ -20,18 +20,18 @@ exports[`HomePage renders correctly 1`] = `
     css={
       Object {
         "map": undefined,
-        "name": "17nvo1r",
+        "name": "73vj80",
         "next": undefined,
         "styles": "
-          flex:1;
-          header {
-            border-bottom: solid 1px;
-            padding: 3.24rem;
-          }
-          main {
-            padding: 3.24rem;
-          }
-        ",
+            flex:1;
+            header {
+              border-bottom: solid 1px;
+              padding: 3.24rem;
+            }
+            main {
+              padding: 3.24rem;
+            }
+          ",
       }
     }
   >
@@ -111,27 +111,91 @@ exports[`HomePage renders correctly 1`] = `
           </li>
         </ul>
       </section>
-      <h2>
-        Also, this...
-      </h2>
+      <h3>
+        Stripe Tools
+      </h3>
+      <p>
+        Depending on the level of customization required, you may decide to use "Stripe Checkout", or "Stripe Elements".
+      </p>
+      <p>
+        The plugins are installed.  Configure with your own key and form handler.
+      </p>
+      <p>
+        <strong>
+          To see these tools in action:
+        </strong>
+         use any email address, 4242 4242 4242 4242 as the credit card number, any 3 numbers for CVC, and any future date of expiration.
+      </p>
+      <h4>
+        Stripe Checkout(Beta) Demo
+      </h4>
       <div>
-        <h4>
-          Stripe payment tools!
-        </h4>
         <button
           data-testid="checkout-button"
           disabled={false}
           onClick={[Function]}
         >
-          BUY NOW
+          Pay with 'Stripe Checkout (Beta)'
         </button>
         <span>
           
         </span>
-        <p>
-          The plugins are installed.  Configure with your own key and form handler.  Hint for testing: use any email address, 4242 4242 4242 4242 as the credit card number, any 3 digit number, and any future date of expiration.
-        </p>
       </div>
+      <p>
+        Stripe Checkout (Beta) is simple.  You pass it some info and it takes your customer through a payment form fully-hosted by Stripe.  (A lot like the ease of PayPal circa 2001.)
+      </p>
+      <h4>
+        Stripe Checkout(v3) Demo
+      </h4>
+      <div>
+        <button
+          data-testid="checkout-button"
+          disabled={false}
+          onClick={[Function]}
+        >
+          Pay with 'Stripe Checkout (v3)'
+        </button>
+        <span>
+          
+        </span>
+      </div>
+      <p>
+        Stripe Checkout (v3) is medium-simple.  You pass it an amount and a description, and it validates the Credit Card and delivers you a token.  You must also produce a self-hosted lambda-like function to actually interact with your Stripe account — like performing charges.
+      </p>
+      <h4>
+        Stripe Elements Demo (Using &lt;CardElement /&gt;)
+      </h4>
+      <form
+        onSubmit={[Function]}
+      >
+        <div>
+          <input
+            id="amount"
+            name="amount"
+            placeholder="How much would you like to pay?"
+            type="text"
+          />
+        </div>
+        <div>
+          <input
+            id="cardholdersName"
+            name="cardholdersName"
+            placeholder="Cardholder's Name"
+            type="text"
+          />
+        </div>
+        <div>
+          <label>
+            <div />
+          </label>
+        </div>
+        <button>
+          Submit Card Details to Stripe, and Retrieve Token
+        </button>
+      </form>
+      <p>
+        Stripe Elements are not styled but allow for custom forms, such as the Name and Amount fields above.
+      </p>
     </main>
   </div>
   <footer

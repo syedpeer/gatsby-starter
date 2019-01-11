@@ -13,9 +13,11 @@ const StripeCheckout = class extends React.Component {
 		this.setState({ disabled: false, buttonText: `Pay with 'Stripe Checkout (Beta)'`})
 	}
 	componentDidMount() {
-		this.stripe = window.Stripe(metaData.stripe_public_key_test, {
-			betas: ['checkout_beta_4'],
-		})
+		if((typeof window !== `undefined`) && (typeof window.Stripe !== `undefined`)) {
+			this.stripe = window.Stripe(metaData.stripe_public_key_test, {
+				betas: ['checkout_beta_4'],
+			})
+		}
 	}
 	async redirectToCheckout(event) {
 		let loc = location.href
