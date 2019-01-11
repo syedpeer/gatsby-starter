@@ -1,6 +1,12 @@
 <h1 align="center">Gatsby Starter by David Sabine</h1>
 <h2 align="center">Gatsby (v2) plus plugins for Google Analytics, Tag Manager, Manifest, SEO tools, Stripe, and automated-test tools preferred by the Gatsby core contributors: Jest &amp; Cypress.</h2>
  
+## 🚀 Online Demo
+
+- [gatsby-starter.davesabine.com](https://gatsby-starter.davesabine.com)
+
+## About this Starter
+ 
 Basically, this started with [gatsby-starter-hello-world](https://github.com/gatsbyjs/gatsby-starter-hello-world), then I added:
 
 - test tools _a la_ [the official testing guides](https://next.gatsbyjs.org/docs/testing/)
@@ -9,7 +15,7 @@ Basically, this started with [gatsby-starter-hello-world](https://github.com/gat
 - Stripe plugins to enable e-commerce features
 - and `gatsby-plugin-create-client-paths` to isolate an area of the site for dynamic (non-static) React app
   
-## 🚀 Quick start
+## Quick Start
 
 1.  **Install the Gatsby CLI.**
 
