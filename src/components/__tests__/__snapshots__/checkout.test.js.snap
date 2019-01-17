@@ -3,7 +3,7 @@
 exports[`Checkout (v3) renders correctly with react-test-renderer 1`] = `
 <div>
   <button
-    data-testid="checkout-button"
+    data-testid="checkout-button-v3"
     disabled={false}
     onClick={[Function]}
   >

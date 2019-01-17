@@ -149,7 +149,7 @@ exports[`HomePage renders correctly 1`] = `
       </h4>
       <div>
         <button
-          data-testid="checkout-button"
+          data-testid="checkout-button-v3"
           disabled={false}
           onClick={[Function]}
         >
