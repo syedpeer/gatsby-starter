@@ -1,8 +1,8 @@
 import HtmlHead from '../../components/htmlhead'
 import Layout from '../../components/layout'
 import React from 'react'
-import { handleLogin, isLoggedIn } from "../../utils/auth"
-import { navigate } from "gatsby"
+import { getUser, handleLogin, isLoggedIn, logout } from "../../utils/auth"
+import { Link, navigate } from "gatsby"
 import { Router } from '@reach/router'
 
 const pageData = require(`../../../nav-config`).pages.dashboard
@@ -15,6 +15,7 @@ export class Dashboard extends React.Component {
 				<HtmlHead title={pageData.title} />
 				<main>
 					<h2>Dashboard</h2>
+					<NavBar />
 					<Router>
 						<PrivateRoute path='/dashboard/profile' component={Profile} />
 						<PublicRoute path='/dashboard'>
@@ -71,8 +72,40 @@ class Login extends React.Component {
 	render() {
 		return (
 			<>
-				<h1>Log in</h1>
-				<button onClick={this.handleSubmit}>log in</button>
+				<button onClick={this.handleSubmit}>Login</button>
+			</>
+		)
+	}
+}
+
+class NavBar extends React.Component {
+	render() {
+	const content = {
+		message: ``,
+		login: true,
+	}
+	const user = getUser()
+	if (isLoggedIn()) {
+		content.message = `You are logged in.`
+	} else {
+		content.message = `You are not logged in.`
+	}
+		return (
+			<>
+			 {content.message}
+			 <nav>
+				 <li><Link to='/dashboard/'>Main Dashboard</Link></li>
+				 <li><Link to='/dashboard/profile'>Your Profile</Link></li>
+				 {isLoggedIn() ? (
+					 <li><a href='/'
+					 onClick={event => {
+						 event.preventDefault()
+						 logout(() => navigate(`/dashboard/login`))
+					 }}>Logout</a></li>
+				 ) : (
+					 <li><Link to='/dashboard/login'>Login</Link></li>
+				 )}
+			 </nav>
 			</>
 		)
 	}

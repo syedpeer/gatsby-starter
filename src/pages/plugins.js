@@ -33,7 +33,7 @@ class PluginsMarkup extends React.Component {
 					<Layout>
 						<HtmlHead title={pageData.title} />
 						<main>
-							<h2>Plugins UseD in this Starter</h2>
+							<h2>Plugins Used in this Starter</h2>
 								{plugins.edges.map(({ node: plugin }) => (
 									<PluginList plugin={plugin} />
 								))}
