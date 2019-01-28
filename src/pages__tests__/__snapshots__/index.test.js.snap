@@ -37,166 +37,213 @@ exports[`HomePage renders correctly 1`] = `
   >
     <header>
       <h1>
-        Hello world!
+        gatsby-starter by David Sabine
       </h1>
     </header>
-    <main>
-      <section>
-        <p
-          data-testid="app-description"
-        >
-          This is a Gatsbyjs starter that ships with boilerplate Gatsby and a small collection of plugins to start a PWA with Google Analytics, Tag Manager, Manifest, SEO tools, Stripe for product listings and checkout, plus the basic TDD/automated-test tools preferred by the Gatsby core contributors: Jest & Cypress.
+    <div
+      css={
+        Object {
+          "map": undefined,
+          "name": "tnyl6e",
+          "next": undefined,
+          "styles": "
+              @media all and (min-width: 768px) {
+                display:flex;
+              }
+            ",
+        }
+      }
+    >
+      <div
+        className="nav"
+        css={
+          Object {
+            "map": undefined,
+            "name": "18nngpj",
+            "next": undefined,
+            "styles": "
+                border-left: solid 1px;
+                order:2;
+                padding: 3.24rem;
+                nav {
+                  list-style:none;
+                }
+              ",
+          }
+        }
+      >
+        <section>
+          <h2>
+            Contents
+          </h2>
+          <nav>
+            <li>
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/404/"
+              >
+                Custom 404 Error
+              </a>
+            </li>
+            <li>
+              <a
+                href="/dashboard/"
+              >
+                Client-Only Path
+              </a>
+            </li>
+          </nav>
+        </section>
+      </div>
+      <main>
+        <section>
+          <p
+            data-testid="app-description"
+          >
+            This is a Gatsbyjs starter that I use to test things and practice.  You are welcome to look around for examples how to use many Gatsby plugins and utilities.
+          </p>
+          <code>
+            $ gatsby new my-website https://github.com/DavidSabine/gatsby-starter
+            <br />
+            # these commands presume that you have node, yarn, git, and gatsby-cli
+            <br />
+            # visit the readme at 
+            <a
+              href="//github.com/DavidSabine/gatsby-starter/blob/master/README.md"
+              onClick={[Function]}
+            >
+              github.com/DavidSabine/gatsby-starter
+            </a>
+          </code>
+          <p>
+            To see it all in action, then run the following:
+          </p>
+          <code>
+            $ yarn
+            <br />
+            $ yarn develop # then go to http://localhost:8000 in your browser
+            <br />
+          </code>
+          <p>
+            To see the tests run, use...
+          </p>
+          <code>
+            $ yarn test
+            <br />
+            $ yarn test:e2e
+            <br />
+          </code>
+          <p>
+            The demo of this starter is at 
+            <a
+              href="//gatsby-starter.davesabine.com"
+              onClick={[Function]}
+            >
+              gatsby-starter.davesabine.com
+            </a>
+             and the full source code is at 
+            <a
+              href="//github.com/DavidSabine/gatsby-starter"
+              onClick={[Function]}
+            >
+              github.com/DavidSabine/gatsby-starter
+            </a>
+            .
+          </p>
+        </section>
+        <h3>
+          Stripe Tools
+        </h3>
+        <p>
+          Depending on the level of customization required, you may decide to use "Stripe Checkout", or "Stripe Elements".
         </p>
         <p>
-          A demo of this starter can be found at 
-          <a
-            href="//gatsby-starter.davesabine.com"
-          >
-            gatsby-starter.davesabine.com
-          </a>
-           and the full source code is at 
-          <a
-            href="//github.com/DavidSabine/gatsby-starter"
-          >
-            github.com/DavidSabine/gatsby-starter
-          </a>
-          .
+          The plugins are installed.  Configure with your own key and form handler.
         </p>
-      </section>
-      <section>
-        <h2>
-          Notable Pages of this Starter
-        </h2>
-        <ul>
-          <li>
-            <a
-              href="/"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="/404/"
-            >
-              Custom 404 Error
-            </a>
-            : overrides the Gatsbyjs default 404
-          </li>
-          <li>
-            <a
-              href="/dashboard/"
-            >
-              Dashboard
-            </a>
-            : a client-only path (not rendered as static HTML)
-            <ul>
-              <li>
-                <a
-                  href="/dashboard/login"
-                >
-                  Login
-                </a>
-                : just a placeholder component
-              </li>
-              <li>
-                <a
-                  href="/dashboard/profile"
-                >
-                  Profile
-                </a>
-                : just a placeholder component
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <h3>
-        Stripe Tools
-      </h3>
-      <p>
-        Depending on the level of customization required, you may decide to use "Stripe Checkout", or "Stripe Elements".
-      </p>
-      <p>
-        The plugins are installed.  Configure with your own key and form handler.
-      </p>
-      <p>
-        <strong>
-          To see these tools in action:
-        </strong>
-         use any email address, 4242 4242 4242 4242 as the credit card number, any 3 numbers for CVC, and any future date of expiration.
-      </p>
-      <h4>
-        Stripe Checkout(Beta) Demo
-      </h4>
-      <div>
-        <button
-          data-testid="checkout-button"
-          disabled={false}
-          onClick={[Function]}
+        <p>
+          <strong>
+            To see these tools in action:
+          </strong>
+           use any email address, 4242 4242 4242 4242 as the credit card number, any 3 numbers for CVC, and any future date of expiration.
+        </p>
+        <h4>
+          Stripe Checkout(Beta) Demo
+        </h4>
+        <div>
+          <button
+            data-testid="checkout-button"
+            disabled={false}
+            onClick={[Function]}
+          >
+            Pay with 'Stripe Checkout (Beta)'
+          </button>
+          <span>
+            
+          </span>
+        </div>
+        <p>
+          Stripe Checkout (Beta) is simple.  You pass it some info and it takes your customer through a payment form fully-hosted by Stripe.  (A lot like the ease of PayPal circa 2001.)
+        </p>
+        <h4>
+          Stripe Checkout(v3) Demo
+        </h4>
+        <div>
+          <button
+            data-testid="checkout-button-v3"
+            disabled={false}
+            onClick={[Function]}
+          >
+            Pay with 'Stripe Checkout (v3)'
+          </button>
+          <span>
+            
+          </span>
+        </div>
+        <p>
+          Stripe Checkout (v3) is medium-simple.  You pass it an amount and a description, and it validates the Credit Card and delivers you a token.  You must also produce a self-hosted lambda-like function to actually interact with your Stripe account — like performing charges.
+        </p>
+        <h4>
+          Stripe Elements Demo (Using &lt;CardElement /&gt;)
+        </h4>
+        <form
+          onSubmit={[Function]}
         >
-          Pay with 'Stripe Checkout (Beta)'
-        </button>
-        <span>
-          
-        </span>
-      </div>
-      <p>
-        Stripe Checkout (Beta) is simple.  You pass it some info and it takes your customer through a payment form fully-hosted by Stripe.  (A lot like the ease of PayPal circa 2001.)
-      </p>
-      <h4>
-        Stripe Checkout(v3) Demo
-      </h4>
-      <div>
-        <button
-          data-testid="checkout-button-v3"
-          disabled={false}
-          onClick={[Function]}
-        >
-          Pay with 'Stripe Checkout (v3)'
-        </button>
-        <span>
-          
-        </span>
-      </div>
-      <p>
-        Stripe Checkout (v3) is medium-simple.  You pass it an amount and a description, and it validates the Credit Card and delivers you a token.  You must also produce a self-hosted lambda-like function to actually interact with your Stripe account — like performing charges.
-      </p>
-      <h4>
-        Stripe Elements Demo (Using &lt;CardElement /&gt;)
-      </h4>
-      <form
-        onSubmit={[Function]}
-      >
-        <div>
-          <input
-            id="amount"
-            name="amount"
-            placeholder="How much would you like to pay?"
-            type="text"
-          />
-        </div>
-        <div>
-          <input
-            id="cardholdersName"
-            name="cardholdersName"
-            placeholder="Cardholder's Name"
-            type="text"
-          />
-        </div>
-        <div>
-          <label>
-            <div />
-          </label>
-        </div>
-        <button>
-          Submit Card Details to Stripe, and Retrieve Token
-        </button>
-      </form>
-      <p>
-        Stripe Elements are not styled but allow for custom forms, such as the Name and Amount fields above.
-      </p>
-    </main>
+          <div>
+            <input
+              id="amount"
+              name="amount"
+              placeholder="How much would you like to pay?"
+              type="text"
+            />
+          </div>
+          <div>
+            <input
+              id="cardholdersName"
+              name="cardholdersName"
+              placeholder="Cardholder's Name"
+              type="text"
+            />
+          </div>
+          <div>
+            <label>
+              <div />
+            </label>
+          </div>
+          <button>
+            Submit Card Details to Stripe, and Retrieve Token
+          </button>
+        </form>
+        <p>
+          Stripe Elements are not styled but allow for custom forms, such as the Name and Amount fields above.
+        </p>
+      </main>
+    </div>
   </div>
   <footer
     dangerouslySetInnerHTML={

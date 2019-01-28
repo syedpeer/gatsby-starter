@@ -1,3 +1,4 @@
+import AllSitePages from '../components/allsitepages'
 import Footer from '../components/footer'
 import React from 'react'
 import { css } from '@emotion/core'
@@ -27,16 +28,39 @@ class Template extends React.Component {
           min-height:100vh;
         `}>
           <div css={css`
-            flex:1;
+            flex-basis: auto;
+            flex-grow: 1;
             header {
               border-bottom: solid 1px;
               padding: ${rhythm(2)};
             }
             main {
+              flex-grow:1;
               padding: ${rhythm(2)};
             }
           `}>
-            {children}
+             <header>
+              <h1>gatsby-starter by David&nbsp;Sabine</h1>
+            </header>
+            <div css={css`
+              @media all and (min-width: 768px) {
+                display:flex;
+              }
+            `}>
+              <div className='nav' css={css`
+                border-left: solid 1px;
+                order:2;
+                padding: ${rhythm(2)};
+                min-width:20vw;
+                nav ul {
+                  list-style:none;
+                  margin:0;
+                }
+              `}>
+                <AllSitePages />
+              </div>
+              {children}
+            </div>
           </div>
           <Footer css={css`
             flex:none;

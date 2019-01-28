@@ -37,20 +37,95 @@ exports[`404 renders correctly 1`] = `
   >
     <header>
       <h1>
-        Page not found
+        gatsby-starter by David Sabine
       </h1>
     </header>
-    <main>
-      <p>
-        You might find what you're looking for at 
-        <a
-          href="/"
-        >
-          the index page
-        </a>
-        .
-      </p>
-    </main>
+    <div
+      css={
+        Object {
+          "map": undefined,
+          "name": "tnyl6e",
+          "next": undefined,
+          "styles": "
+              @media all and (min-width: 768px) {
+                display:flex;
+              }
+            ",
+        }
+      }
+    >
+      <div
+        className="nav"
+        css={
+          Object {
+            "map": undefined,
+            "name": "18nngpj",
+            "next": undefined,
+            "styles": "
+                border-left: solid 1px;
+                order:2;
+                padding: 3.24rem;
+                nav {
+                  list-style:none;
+                }
+              ",
+          }
+        }
+      >
+        <section>
+          <h2>
+            Contents
+          </h2>
+          <nav>
+            <li>
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/404/"
+              >
+                Custom 404 Error
+              </a>
+            </li>
+            <li>
+              <a
+                href="/dashboard/"
+              >
+                Client-Only Path
+              </a>
+            </li>
+          </nav>
+        </section>
+      </div>
+      <header>
+        <h1>
+          Page not found
+        </h1>
+      </header>
+      <main>
+        <p>
+          You might find what you're looking for at 
+          <a
+            aria-current="page"
+            className=""
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={Object {}}
+          >
+            the index page
+          </a>
+          .
+        </p>
+        <p>
+          Note: this 404 page overrides Gatsby's built-in 404.
+        </p>
+      </main>
+    </div>
   </div>
   <footer
     dangerouslySetInnerHTML={

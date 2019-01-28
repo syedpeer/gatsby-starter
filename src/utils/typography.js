@@ -40,6 +40,12 @@ const typography = new Typography(
 				fontWeight: options.bodyWeight,
 				fontStyle: `normal`,
 			},
+			'code': {
+				backgroundColor: gray(95, `204`),
+				display:`block`,
+				marginBottom: rhythm(2),
+				padding: rhythm(1),
+			},
 			h1: scale(4 / 4),
 			h2: scale(3 / 4),
 			h3: scale(2 / 4),

@@ -2,6 +2,7 @@ import { Router } from '@reach/router'
 import HtmlHead from '../../components/htmlhead'
 import Layout from '../../components/layout'
 import React from 'react'
+import { Link } from 'gatsby'
 
 const Profile = () => (
 	<>
@@ -28,10 +29,16 @@ export class Dashboard extends React.Component {
 		return (
 			<Layout>
 				<HtmlHead title='Dashboard' />
-				<header>
-					<h1>Dashboard</h1>
-				</header>
 				<main>
+					<h2>Dashboard</h2>
+					<ul>
+						<li><Link to='/dashboard/'>Client-Only Path</Link>
+							<ul>
+								<li><Link to='/dashboard/login'>Login</Link>: just a placeholder component</li>
+								<li><Link to='/dashboard/profile'>Profile</Link>: just a placeholder component</li>
+							</ul>
+						</li>
+					</ul>
 					<Router>
 						<Profile path='/dashboard/profile' />
 						<Login path='/dashboard/login' />

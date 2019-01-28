@@ -37,10 +37,110 @@ exports[`Dashboard renders correctly 1`] = `
   >
     <header>
       <h1>
-        Dashboard
+        gatsby-starter by David Sabine
       </h1>
     </header>
-    <main />
+    <div
+      css={
+        Object {
+          "map": undefined,
+          "name": "tnyl6e",
+          "next": undefined,
+          "styles": "
+              @media all and (min-width: 768px) {
+                display:flex;
+              }
+            ",
+        }
+      }
+    >
+      <div
+        className="nav"
+        css={
+          Object {
+            "map": undefined,
+            "name": "18nngpj",
+            "next": undefined,
+            "styles": "
+                border-left: solid 1px;
+                order:2;
+                padding: 3.24rem;
+                nav {
+                  list-style:none;
+                }
+              ",
+          }
+        }
+      >
+        <section>
+          <h2>
+            Contents
+          </h2>
+          <nav>
+            <li>
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/404/"
+              >
+                Custom 404 Error
+              </a>
+            </li>
+            <li>
+              <a
+                href="/dashboard/"
+              >
+                Client-Only Path
+              </a>
+            </li>
+          </nav>
+        </section>
+      </div>
+      <header>
+        <h1>
+          Dashboard
+        </h1>
+      </header>
+      <ul>
+        <li>
+          <a
+            href="/dashboard/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Client-Only Path
+          </a>
+          <ul>
+            <li>
+              <a
+                href="/dashboard/login"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                Login
+              </a>
+              : just a placeholder component
+            </li>
+            <li>
+              <a
+                href="/dashboard/profile"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                Profile
+              </a>
+              : just a placeholder component
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <main />
+    </div>
   </div>
   <footer
     dangerouslySetInnerHTML={
