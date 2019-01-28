@@ -62,6 +62,13 @@ module.exports = {
 				theme_color: `#ffffff`,
 			}
 		},
+		{
+			resolve: `gatsby-plugin-netlify-functions`,
+			options: {
+				functionsSrc: `${__dirname}/src-functions`,
+				functionsOutput: `${__dirname}/__functions__`,
+			}
+		},
 		`gatsby-plugin-react-helmet`,
     `gatsby-plugin-robots-txt`,
 		`gatsby-plugin-sitemap`,

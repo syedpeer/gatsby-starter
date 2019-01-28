@@ -123,6 +123,16 @@ exports[`Dashboard renders correctly 1`] = `
                   Plugins
                 </a>
               </li>
+              <li
+                id="tools"
+              >
+                <a
+                  activeClassName="current"
+                  href="/tools/"
+                >
+                  Tools and Utilities
+                </a>
+              </li>
             </ul>
           </nav>
         </section>
@@ -131,39 +141,36 @@ exports[`Dashboard renders correctly 1`] = `
         <h2>
           Dashboard
         </h2>
-        <ul>
+        You are not logged in.
+        <nav>
           <li>
             <a
               href="/dashboard/"
               onClick={[Function]}
               onMouseEnter={[Function]}
             >
-              Client-Only Path
+              Main Dashboard
             </a>
-            <ul>
-              <li>
-                <a
-                  href="/dashboard/login"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                >
-                  Login
-                </a>
-                : just a placeholder component
-              </li>
-              <li>
-                <a
-                  href="/dashboard/profile"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                >
-                  Profile
-                </a>
-                : just a placeholder component
-              </li>
-            </ul>
           </li>
-        </ul>
+          <li>
+            <a
+              href="/dashboard/profile"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              Your Profile
+            </a>
+          </li>
+          <li>
+            <a
+              href="/dashboard/login"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              Login
+            </a>
+          </li>
+        </nav>
       </main>
     </div>
   </div>

@@ -63,6 +63,16 @@ class PluginList extends React.Component {
 }
 
 class PluginArticle extends React.Component {
+	state = {
+		helloButtonText: `Click Me`
+	}
+	sayHelloWorld() {
+		fetch(`/.netlify/functions/hello`, {
+			method: `GET`
+		})
+		.then(res => res.json())
+		.then(({ message }) => this.setState({ helloButtonText: message }))
+	}
 	render() {
 		const thisHeading = <h3 id={this.props.plugin.id}>{this.props.plugin.name}</h3>
 		const thisArticle = this.props.plugin.name
@@ -121,6 +131,25 @@ class PluginArticle extends React.Component {
 					<div>
 						{thisHeading}
 						<p>This plugin simply produces a robots.txt file during build.</p>
+					</div>
+				)
+			case `gatsby-plugin-netlify-functions`:
+				return (
+					<div>
+						{thisHeading}
+						<p>So, Netlify hosts lambda functions which you write and keep in your gatsby repository.  It's really convenient.</p>
+						<p>What's even better, is that they've produced a tool which makes it possible to locally host and run tests against your lambda function — yes, on http://localhost!</p>
+						<p>This plugin then does two <strong>super helpful</strong> things:</p>
+						<ul>
+							<li>this plugin tells webpack where to find the source code of your lambda functions, and where to put the build so that Netlify's servers can find them in your repo.</li>
+							<li>and this plugin makes like a proxy so that your lambda function (running at https://localhost:9000 by default) appears on port :8000 so that you can use the function while running Jest or Cypress tests, or while running <code>gatsby develop</code>.</li>
+						</ul>
+						<p><OutboundLink href='/.netlify/functions/hello'>Click here to see the output of a simple 'hello world' lambda function.</OutboundLink></p>
+						<p>
+							<button onClick={event => this.sayHelloWorld(event)}>
+								{this.state.helloButtonText}
+							</button>
+						</p>
 					</div>
 				)
 			case `gatsby-plugin-sitemap`:

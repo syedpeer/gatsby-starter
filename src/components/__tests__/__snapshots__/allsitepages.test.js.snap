@@ -47,6 +47,16 @@ exports[`AllSitePages renders correctly -- according to react-test-renderer 1`] 
           Plugins
         </a>
       </li>
+      <li
+        id="tools"
+      >
+        <a
+          activeClassName="current"
+          href="/tools/"
+        >
+          Tools and Utilities
+        </a>
+      </li>
     </ul>
   </nav>
 </section>

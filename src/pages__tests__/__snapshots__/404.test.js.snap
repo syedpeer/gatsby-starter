@@ -123,6 +123,16 @@ exports[`404 renders correctly 1`] = `
                   Plugins
                 </a>
               </li>
+              <li
+                id="tools"
+              >
+                <a
+                  activeClassName="current"
+                  href="/tools/"
+                >
+                  Tools and Utilities
+                </a>
+              </li>
             </ul>
           </nav>
         </section>
