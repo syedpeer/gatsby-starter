@@ -20,10 +20,10 @@ module.exports = {
 			title: `Plugins`,
 			navTitle: `Plugins`,
 		},
-		// tools: {
-		// 	path: `/tools/`,
-		// 	title: `Tools and Utilities`,
-		// 	navTitle: `Tools and Utilities`,
-		// },
+		tools: {
+			path: `/tools/`,
+			title: `Tools and Utilities`,
+			navTitle: `Tools and Utilities`,
+		},
 	}
 }

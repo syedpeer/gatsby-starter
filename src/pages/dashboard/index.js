@@ -73,6 +73,11 @@ class Login extends React.Component {
 		return (
 			<>
 				<button onClick={this.handleSubmit}>Login</button>
+				<p>To try the log in modal, use:</p>
+				<ul>
+					<li>email: gatsby-starter@outlook.com</li>
+					<li>password: unicorn</li>
+				</ul>
 			</>
 		)
 	}
