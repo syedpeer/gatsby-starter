@@ -1,29 +1,11 @@
-import { Router } from '@reach/router'
 import HtmlHead from '../../components/htmlhead'
 import Layout from '../../components/layout'
 import React from 'react'
-import { Link } from 'gatsby'
+import { handleLogin, isLoggedIn } from "../../utils/auth"
+import { navigate } from "gatsby"
+import { Router } from '@reach/router'
 
 const pageData = require(`../../../nav-config`).pages.dashboard
-
-const Profile = () => (
-	<>
-		<h1>Your profile</h1>
-		<ul>
-			<li>You</li>
-			<li>are you.</li>
-		</ul>
-	</>
-)
-const Login = () => (
-	<>
-		<h1>Login</h1>
-		<ul>
-			<li>Who</li>
-			<li>are you?</li>
-		</ul>
-	</>
-)
 
 export class Dashboard extends React.Component {
 	render() {
@@ -33,17 +15,12 @@ export class Dashboard extends React.Component {
 				<HtmlHead title={pageData.title} />
 				<main>
 					<h2>Dashboard</h2>
-					<ul>
-						<li><Link to='/dashboard/'>Client-Only Path</Link>
-							<ul>
-								<li><Link to='/dashboard/login'>Login</Link>: just a placeholder component</li>
-								<li><Link to='/dashboard/profile'>Profile</Link>: just a placeholder component</li>
-							</ul>
-						</li>
-					</ul>
 					<Router>
-						<Profile path='/dashboard/profile' />
-						<Login path='/dashboard/login' />
+						<PrivateRoute path='/dashboard/profile' component={Profile} />
+						<PublicRoute path='/dashboard'>
+							<PrivateRoute path='/' component={Main} />
+							<Login path='/login' />
+						</PublicRoute>
 					</Router>
 				</main>
 			</Layout>
@@ -52,3 +29,51 @@ export class Dashboard extends React.Component {
 }
 
 export default Dashboard
+
+function PublicRoute(props) {
+	return <>{props.children}</>
+}
+
+class PrivateRoute extends React.Component {
+	componentDidMount = () => {
+	const { location } = this.props
+		if (!isLoggedIn() && location.pathname !== `/dashboard/login`) {
+			navigate(`/dashboard/login`)
+			return null
+		}
+	}
+	render() {
+		const { component: Component, location, ...rest } = this.props
+		return isLoggedIn() ? <Component {...rest} /> : null
+	}
+}
+
+class Main extends React.Component {
+	render() {
+		return (
+			<>This is "main".</>
+		)
+	}
+}
+
+class Profile extends React.Component {
+	render() {
+		return (
+			<>This is "profile".</>
+		)
+	}
+}
+
+class Login extends React.Component {
+	handleSubmit = () => {
+		handleLogin(user => navigate(`/dashboard/profile`))
+	}
+	render() {
+		return (
+			<>
+				<h1>Log in</h1>
+				<button onClick={this.handleSubmit}>log in</button>
+			</>
+		)
+	}
+}
