@@ -40,7 +40,7 @@ class Template extends React.Component {
             }
           `}>
              <header>
-              <h1>gatsby-starter by David&nbsp;Sabine</h1>
+              <h1>gatsby-starter by David Sabine</h1>
             </header>
             <div css={css`
               @media all and (min-width: 768px) {
@@ -51,7 +51,8 @@ class Template extends React.Component {
                 border-left: solid 1px;
                 order:2;
                 padding: ${rhythm(2)};
-                min-width:20vw;
+                width:20vw;
+                min-width:330px;
                 nav ul {
                   list-style:none;
                   margin:0;

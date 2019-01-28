@@ -30,6 +30,7 @@ const StripeCheckout3 = class extends React.Component {
 			amount: 2500,
 			description: `A product for demonstration.`,
 			token: token => {
+				this.setState({ paymentMessage: `We have a token: `+ token.id})
 				// do nothing for now... no 'charges' are incurred until you've got a checkout handler endpoint (in lambda or similar)
 				// fetch(`https://gatsby-starter.davesabine.com/.netlify/functions/checkout-handler`, {
 				// 	method: `POST`,
@@ -59,7 +60,7 @@ const StripeCheckout3 = class extends React.Component {
 		return (
 			<div>
 				<button data-testid='checkout-button-v3' onClick={event => this.openStripeCheckout(event)} disabled={this.state.disabled}>{this.state.buttonText}</button>
-				<span>{this.state.paymentMessage}</span>
+				<div>{this.state.paymentMessage}</div>
 			</div>
 		)
 	}

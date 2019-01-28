@@ -20,15 +20,17 @@ exports[`HomePage renders correctly 1`] = `
     css={
       Object {
         "map": undefined,
-        "name": "73vj80",
+        "name": "1v1mbgo",
         "next": undefined,
         "styles": "
-            flex:1;
+            flex-basis: auto;
+            flex-grow: 1;
             header {
               border-bottom: solid 1px;
               padding: 3.24rem;
             }
             main {
+              flex-grow:1;
               padding: 3.24rem;
             }
           ",
@@ -59,14 +61,17 @@ exports[`HomePage renders correctly 1`] = `
         css={
           Object {
             "map": undefined,
-            "name": "18nngpj",
+            "name": "1gc62of",
             "next": undefined,
             "styles": "
                 border-left: solid 1px;
                 order:2;
                 padding: 3.24rem;
-                nav {
+                width:20vw;
+                min-width:330px;
+                nav ul {
                   list-style:none;
+                  margin:0;
                 }
               ",
           }
@@ -74,30 +79,51 @@ exports[`HomePage renders correctly 1`] = `
       >
         <section>
           <h2>
-            Contents
+            About this Starter
           </h2>
           <nav>
-            <li>
-              <a
-                href="/"
+            <ul>
+              <li
+                id="home"
               >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="/404/"
+                <a
+                  activeClassName="current"
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                id="dashboard"
               >
-                Custom 404 Error
-              </a>
-            </li>
-            <li>
-              <a
-                href="/dashboard/"
+                <a
+                  activeClassName="current"
+                  href="/dashboard/"
+                >
+                  Client-Only Path
+                </a>
+              </li>
+              <li
+                id="fourOhFour"
               >
-                Client-Only Path
-              </a>
-            </li>
+                <a
+                  activeClassName="current"
+                  href="/404/"
+                >
+                  Custom 404 Page
+                </a>
+              </li>
+              <li
+                id="plugins"
+              >
+                <a
+                  activeClassName="current"
+                  href="/plugins/"
+                >
+                  Plugins
+                </a>
+              </li>
+            </ul>
           </nav>
         </section>
       </div>
@@ -108,7 +134,9 @@ exports[`HomePage renders correctly 1`] = `
           >
             This is a Gatsbyjs starter that I use to test things and practice.  You are welcome to look around for examples how to use many Gatsby plugins and utilities.
           </p>
-          <code>
+          <code
+            className="block"
+          >
             $ gatsby new my-website https://github.com/DavidSabine/gatsby-starter
             <br />
             # these commands presume that you have node, yarn, git, and gatsby-cli
@@ -124,7 +152,9 @@ exports[`HomePage renders correctly 1`] = `
           <p>
             To see it all in action, then run the following:
           </p>
-          <code>
+          <code
+            className="block"
+          >
             $ yarn
             <br />
             $ yarn develop # then go to http://localhost:8000 in your browser
@@ -133,7 +163,9 @@ exports[`HomePage renders correctly 1`] = `
           <p>
             To see the tests run, use...
           </p>
-          <code>
+          <code
+            className="block"
+          >
             $ yarn test
             <br />
             $ yarn test:e2e
@@ -157,91 +189,6 @@ exports[`HomePage renders correctly 1`] = `
             .
           </p>
         </section>
-        <h3>
-          Stripe Tools
-        </h3>
-        <p>
-          Depending on the level of customization required, you may decide to use "Stripe Checkout", or "Stripe Elements".
-        </p>
-        <p>
-          The plugins are installed.  Configure with your own key and form handler.
-        </p>
-        <p>
-          <strong>
-            To see these tools in action:
-          </strong>
-           use any email address, 4242 4242 4242 4242 as the credit card number, any 3 numbers for CVC, and any future date of expiration.
-        </p>
-        <h4>
-          Stripe Checkout(Beta) Demo
-        </h4>
-        <div>
-          <button
-            data-testid="checkout-button"
-            disabled={false}
-            onClick={[Function]}
-          >
-            Pay with 'Stripe Checkout (Beta)'
-          </button>
-          <span>
-            
-          </span>
-        </div>
-        <p>
-          Stripe Checkout (Beta) is simple.  You pass it some info and it takes your customer through a payment form fully-hosted by Stripe.  (A lot like the ease of PayPal circa 2001.)
-        </p>
-        <h4>
-          Stripe Checkout(v3) Demo
-        </h4>
-        <div>
-          <button
-            data-testid="checkout-button-v3"
-            disabled={false}
-            onClick={[Function]}
-          >
-            Pay with 'Stripe Checkout (v3)'
-          </button>
-          <span>
-            
-          </span>
-        </div>
-        <p>
-          Stripe Checkout (v3) is medium-simple.  You pass it an amount and a description, and it validates the Credit Card and delivers you a token.  You must also produce a self-hosted lambda-like function to actually interact with your Stripe account — like performing charges.
-        </p>
-        <h4>
-          Stripe Elements Demo (Using &lt;CardElement /&gt;)
-        </h4>
-        <form
-          onSubmit={[Function]}
-        >
-          <div>
-            <input
-              id="amount"
-              name="amount"
-              placeholder="How much would you like to pay?"
-              type="text"
-            />
-          </div>
-          <div>
-            <input
-              id="cardholdersName"
-              name="cardholdersName"
-              placeholder="Cardholder's Name"
-              type="text"
-            />
-          </div>
-          <div>
-            <label>
-              <div />
-            </label>
-          </div>
-          <button>
-            Submit Card Details to Stripe, and Retrieve Token
-          </button>
-        </form>
-        <p>
-          Stripe Elements are not styled but allow for custom forms, such as the Name and Amount fields above.
-        </p>
       </main>
     </div>
   </div>

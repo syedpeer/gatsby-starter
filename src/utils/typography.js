@@ -40,7 +40,7 @@ const typography = new Typography(
 				fontWeight: options.bodyWeight,
 				fontStyle: `normal`,
 			},
-			'code': {
+			'code.block': {
 				backgroundColor: gray(95, `204`),
 				display:`block`,
 				marginBottom: rhythm(2),

@@ -4,6 +4,8 @@ import Layout from '../../components/layout'
 import React from 'react'
 import { Link } from 'gatsby'
 
+const pageData = require(`../../../nav-config`).pages.dashboard
+
 const Profile = () => (
 	<>
 		<h1>Your profile</h1>
@@ -28,7 +30,7 @@ export class Dashboard extends React.Component {
 		const { children } = this.props
 		return (
 			<Layout>
-				<HtmlHead title='Dashboard' />
+				<HtmlHead title={pageData.title} />
 				<main>
 					<h2>Dashboard</h2>
 					<ul>

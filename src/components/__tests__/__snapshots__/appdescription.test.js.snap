@@ -7,7 +7,9 @@ exports[`AppDescription renders correctly -- according to react-test-renderer 1`
   >
     This is a Gatsbyjs starter that I use to test things and practice.  You are welcome to look around for examples how to use many Gatsby plugins and utilities.
   </p>
-  <code>
+  <code
+    className="block"
+  >
     $ gatsby new my-website https://github.com/DavidSabine/gatsby-starter
     <br />
     # these commands presume that you have node, yarn, git, and gatsby-cli
@@ -23,7 +25,9 @@ exports[`AppDescription renders correctly -- according to react-test-renderer 1`
   <p>
     To see it all in action, then run the following:
   </p>
-  <code>
+  <code
+    className="block"
+  >
     $ yarn
     <br />
     $ yarn develop # then go to http://localhost:8000 in your browser
@@ -32,7 +36,9 @@ exports[`AppDescription renders correctly -- according to react-test-renderer 1`
   <p>
     To see the tests run, use...
   </p>
-  <code>
+  <code
+    className="block"
+  >
     $ yarn test
     <br />
     $ yarn test:e2e

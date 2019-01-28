@@ -9,8 +9,8 @@ exports[`Checkout (v3) renders correctly with react-test-renderer 1`] = `
   >
     Pay with 'Stripe Checkout (v3)'
   </button>
-  <span>
+  <div>
     
-  </span>
+  </div>
 </div>
 `;

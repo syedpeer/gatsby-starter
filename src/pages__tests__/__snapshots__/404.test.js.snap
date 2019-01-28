@@ -20,15 +20,17 @@ exports[`404 renders correctly 1`] = `
     css={
       Object {
         "map": undefined,
-        "name": "73vj80",
+        "name": "1v1mbgo",
         "next": undefined,
         "styles": "
-            flex:1;
+            flex-basis: auto;
+            flex-grow: 1;
             header {
               border-bottom: solid 1px;
               padding: 3.24rem;
             }
             main {
+              flex-grow:1;
               padding: 3.24rem;
             }
           ",
@@ -59,14 +61,17 @@ exports[`404 renders correctly 1`] = `
         css={
           Object {
             "map": undefined,
-            "name": "18nngpj",
+            "name": "1gc62of",
             "next": undefined,
             "styles": "
                 border-left: solid 1px;
                 order:2;
                 padding: 3.24rem;
-                nav {
+                width:20vw;
+                min-width:330px;
+                nav ul {
                   list-style:none;
+                  margin:0;
                 }
               ",
           }
@@ -74,39 +79,58 @@ exports[`404 renders correctly 1`] = `
       >
         <section>
           <h2>
-            Contents
+            About this Starter
           </h2>
           <nav>
-            <li>
-              <a
-                href="/"
+            <ul>
+              <li
+                id="home"
               >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="/404/"
+                <a
+                  activeClassName="current"
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                id="dashboard"
               >
-                Custom 404 Error
-              </a>
-            </li>
-            <li>
-              <a
-                href="/dashboard/"
+                <a
+                  activeClassName="current"
+                  href="/dashboard/"
+                >
+                  Client-Only Path
+                </a>
+              </li>
+              <li
+                id="fourOhFour"
               >
-                Client-Only Path
-              </a>
-            </li>
+                <a
+                  activeClassName="current"
+                  href="/404/"
+                >
+                  Custom 404 Page
+                </a>
+              </li>
+              <li
+                id="plugins"
+              >
+                <a
+                  activeClassName="current"
+                  href="/plugins/"
+                >
+                  Plugins
+                </a>
+              </li>
+            </ul>
           </nav>
         </section>
       </div>
-      <header>
-        <h1>
-          Page not found
-        </h1>
-      </header>
       <main>
+        <h2>
+          Page not found
+        </h2>
         <p>
           You might find what you're looking for at 
           <a

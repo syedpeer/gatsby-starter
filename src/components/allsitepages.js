@@ -10,7 +10,7 @@ class AllSitePages extends React.Component {
 			if (pages.hasOwnProperty(page)) {
 				if(pages[page].navTitle){
 					listItems.push(
-						<li id={page}>
+						<li key={page} id={page}>
 							<Link activeClassName='current' to={pages[page].path}>
 								{pages[page].navTitle}
 							</Link>
